@@ -11,221 +11,25 @@ class MyTemplate {
 	}
 
     public function sysBar($page='') {
-        $cartItemCnt = 0;
-        if ( $this->CI->session->userdata('CART') )  {
-            foreach ($this->CI->session->userdata('CART') as $pId => $v) {
-                $cartItemCnt+=$v['cnt'];
-            }
-        }
+        $html = <<< HTML
+        <div class='sysBar'>
+            <a class='logo' href='{$this->CI->baseUrl}'>
+            </a>
+            <ul class='sysMenuList'>
+                <li class='sysMenuItem'>
 
-        $html = "<div class='sysBar clearfix'>
-                    <a class='logo' href='{$this->CI->baseUrl}'>
-                        <img src='{$this->CI->baseUrl}assets/imgs/logo.svg'>
-                    </a>
-                    <div class='cartBlock'>
-                        <a href='{$this->CI->baseUrl}shop/cart'>CART(<span class='number'>{$cartItemCnt}</span>)</a>
-                    </div>
-                    <div class='menu'>
-                    </div>
+                </li>
+            </ul>
+        </div>
+HTML
+        ;
 
-                    <div class='menuBox clearfix col-lg-2 col-md-2'>
-                        <div class='menuOuter'>
-                            <div class='menuItem'>
-                                <img class='closeMenuBtn' src='{$this->CI->baseUrl}assets/imgs/menu_cancel.svg'>
-                                <ul class='menuList'>
-                                    <li class='item'>
-                                        <div class='content'>
-                                            <a href='{$this->CI->baseUrl}shop'>SHOP</a>
-                                            <div class='border'>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class='item'>
-                                        <div class='content'>
-                                            <a href='{$this->CI->baseUrl}collection'>COLLECTION</a>
-                                            <div class='border'>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class='item'>
-                                        <div class='content'>
-                                            <a href='{$this->CI->baseUrl}concept'>CONCEPT</a>
-                                            <div class='border'>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class='item'>
-                                        <div class='content'>
-                                            <a href='{$this->CI->baseUrl}mind'>MIND</a>
-                                            <div class='border'>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class='item'>
-                                        <div class='content'>
-                                            <a href='{$this->CI->baseUrl}press'>PRESS</a>
-                                            <div class='border'>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class='item'>
-                                        <div class='content'>
-                                            <a href='{$this->CI->baseUrl}stockist'>STOCKIST</a>
-                                            <div class='border'>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class='item'>
-                                        <div class='content'>
-                                            <a href='{$this->CI->baseUrl}contact'>CONTACT</a>
-                                            <div class='border'>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='clearfix'></div>
-                 </div>";
-        $js = <<< JAVASCRIPT
-        (function(){
-            $('.sysBar .menu').click(function(){
-                $('.sysBar .menuBox').toggleClass('active');
-            });
 
-            $('.closeMenuBtn').click(function(){
-                $('.sysBar .menuBox').removeClass('active');
-            });
-        })();
-JAVASCRIPT
-;
-        $this->CI->myjs->add($js);
         return $html;
     }
 
 	public function sysFooter() {
-       $html = "<div class='clearfix'>
-           <div class='sysFooter clearfix'>
-                <div class='container-fluid'>
-                    <div class='row'>
-                        <div class='col-sm-1 col-xs-1 col-sm-offset-2 col-xs-offset-2 hidden-lg hidden-md footerContainer'></div>
-                        <div class='col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 footerContainer'>
-                            <div>
-                                <div class='footerContent row'>
-                                    <div class='col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right'>
-                                        <div class='footerLink hidden-sm hidden-xs'>
-                                            <a data-role='newsletterPC' js-url='{$this->CI->baseUrl}newsletter/home'>NEWSLETTER</a>
-                                        </div>
-                                        <div class='footerLink hidden-lg hidden-md text-left'>
-                                            <a data-role='newsletterMobile' js-url='{$this->CI->baseUrl}newsletter/home'>NEWSLETTER</a>
-                                        </div>
-                                    </div>
-                                    <div class='col-lg-2 col-md-2 col-lg-offset-1 col-md-offset-1 hidden-sm hidden-xs text-center'>
-                                        <div class='mediumDivider'>
-                                        </div>
-                                    </div>
-                                    <div class='col-lg-4 col-md-4 col-sm-6 col-xs-6 col-lg-offset-1 col-md-offset-1 col-sm-offset-2 col-xs-offset-2 text-left'>
-                                        <div class='footerLink customer hidden-sm hidden-xs'>
-                                            <a href='{$this->CI->baseUrl}customercare'>CUSTOMER CARE</a>
-                                        </div>
-                                        <div class='footerLink customer hidden-lg hidden-md text-right'>
-                                            <a href='#'>CUSTOMER CARE</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class='socialMedia text-center'>
-                                    <a href='' class='ig' target='_blank'></a>
-                                    <a href='' class='tr' target='_blank'></a>
-                                    <a href='' class='tt' target='_blank'></a>
-                                    <a href='' class='pin' target='_blank'></a>
-                                    <a href='' class='fb' target='_blank'></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col-sm-1 col-xs-1 hidden-lg hidden-md footerContainer'></div>
-                        <div class='clearfix'></div>
-                        <div class='copyright text-center'>
-                            {$this->CI->lang->line('web_copyright')}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>";
-
-
-        $edmHtml = $this->CI->Mod_newsletter_html->newsletterHtml();
-        $vistedUrl = $this->CI->mylibrary->authUrl("{$this->CI->baseUrl}newsletter_service/setVisted?id=0");
-        $js = <<<JAVASCRIPT
-        (function(){
-
-            $("a[data-role='newsletterPC'], a[data-role='newsletterMobile']").click(function(){
-                var that = $(this),
-                    url = that.attr('js-url'),
-                    timeOutId;
-
-                mylibrary.modal.dialog({
-                    message: "{$edmHtml}",
-                    myClass: 'newsletterModal',
-                    beforeClose: function(){
-                        $.post('{$vistedUrl}', {}, function(obj){
-                            if (obj.status=='false') {
-                                alert(obj.msg);
-                                return;
-                            }
-                        }, 'json')
-                    }
-                });
-
-                $('.newsletter .submit').on('click', function() {
-                    var that = $(this),
-                        url = that.attr('js-url'),
-                        param = {
-                            email : $('#newsletterEmail').val()
-                        };
-
-                    $.post(url, param, function(obj){
-                        $('.hintMsg').hide();
-                        if ( obj.status == 'false' ) {
-                            if ( (obj.msg==myLang.newsletter_fillAllPs) || (obj.msg==myLang.newsletter_exist) ) {
-                                $('.hintMsg .icon').removeClass('ok');
-                                $('.hintMsg .icon').removeClass('wrong');
-                                $('.hintMsg .icon').addClass('hint');
-                            } else {
-                                $('.hintMsg .icon').removeClass('ok');
-                                $('.hintMsg .icon').removeClass('hint');
-                                $('.hintMsg .icon').addClass('wrong');
-                            }
-                            $('.hintMsg .msg').text(obj.msg);
-                            $('.hintMsg').fadeIn();
-                        }
-                        else {
-                            $('.hintMsg .icon').removeClass('wrong');
-                            $('.hintMsg .icon').removeClass('hint');
-                            $('.hintMsg .icon').addClass('ok');
-                            $('.hintMsg .msg').text(obj.msg);
-                            $('.hintMsg').fadeIn();
-                            timeOutId = setTimeout(function(){
-                                window.parent.closeModal();
-                            }, 3000);
-                        }
-                    }, 'json')
-                });
-
-                $('.letterClose').click(function() {
-                    if ( typeof(timeOutId) !== 'undefined' ) {
-                        clearTimeout(timeOutId);
-                    }
-
-                    window.parent.closeModal();
-                });
-            });
-
-        })();
-JAVASCRIPT;
-        $this->CI->myjs->add($js);
-
+        $html = 'footer';
 
         return $html;
 	}
@@ -274,14 +78,14 @@ JAVASCRIPT;
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-    <!-- Background of PhotoSwipe. 
+    <!-- Background of PhotoSwipe.
          It's a separate element as animating opacity is faster than rgba(). -->
     <div class="pswp__bg"></div>
 
     <!-- Slides wrapper with overflow:hidden. -->
     <div class="pswp__scroll-wrap">
 
-        <!-- Container that holds slides. 
+        <!-- Container that holds slides.
             PhotoSwipe keeps only 3 of them in the DOM to save memory.
             Don't modify these 3 pswp__item elements, data is added later on. -->
         <div class="pswp__container">
@@ -319,7 +123,7 @@ JAVASCRIPT;
             </div>
 
             <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
+                <div class="pswp__share-tooltip"></div>
             </div>
 
             <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">

@@ -21,6 +21,7 @@ class Home extends CI_Controller {
         $this->mylayout->add(SYS_CONTENT_BOX, $this->Mod_home_html->index($data));
         $this->mylayout->add(SYS_FOOTER_BOX, $this->mytemplate->sysFooter($data));
         $this->Mod_home_js->index();
+        $this->mycss->addFile("{$this->baseUrl}assets/css/application/my_base.css");
         $this->mycss->addFile("{$this->baseUrl}assets/css/application/my_home.css");
 
 

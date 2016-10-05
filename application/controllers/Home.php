@@ -14,11 +14,7 @@ class Home extends CI_Controller {
     public function index() {
         $data = array(
             'sysconfigs' => array('copyright' => array('value' => 'copyright')),
-            'carousel' => $this->Mod_home->getCarousel(),
-            'mask' => $this->Mod_home->getCarouselMask(),
-            'concept' => $this->Mod_home->getConcept(),
-            'lookbook' => $this->Mod_home->getLookbook(),
-            'editorial' => $this->Mod_home->getEditorial()
+            'carousel' => $this->Mod_home->getCarousel()
         );
 
         $this->mylayout->add(SYS_HEADER_BOX, $this->mytemplate->sysBar($data));

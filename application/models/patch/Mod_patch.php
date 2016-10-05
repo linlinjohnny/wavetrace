@@ -38,9 +38,6 @@ class Mod_patch extends CI_Model {
 		$this->mylibrary->mkdir(FCPATH . 'data/media');
 		$this->mylibrary->mkdir(FCPATH . 'data/temp');
 		$this->mylibrary->mkdir(FCPATH . 'data/concept');
-		$this->mylibrary->mkdir(FCPATH . 'data/mind');
-		$this->mylibrary->mkdir(FCPATH . 'data/shop');
-		$this->mylibrary->mkdir(FCPATH . 'data/collection');
 
 
 		$this->db->query("CREATE TABLE IF NOT EXISTS `user` (
@@ -77,13 +74,7 @@ class Mod_patch extends CI_Model {
 		) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
 
 
-		$this->db->query("CREATE TABLE IF NOT EXISTS `edm_subscriber` (
-			`id` int(11) NOT NULL AUTO_INCREMENT,
-			`email` varchar(255) NOT NULL,
-			`createTime` datetime NOT NULL,
-			PRIMARY KEY (`id`),
-			UNIQUE KEY `email` (`email`)
-		) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
+
 
 
 		$this->db->query("CREATE TABLE IF NOT EXISTS `patch_record` (
@@ -169,26 +160,12 @@ class Mod_patch extends CI_Model {
 			// for ckeditor
 			$this->mylibrary->mkdir((FCPATH . "data/media/ckeditor"));
 
-			// for press
-			$md5Type = substr(md5(rand(1, 9999) . date("Y-m-d H:i:s")), 0, 1);
-	        $md5Dir = md5(rand(1, 9999) . date("Y-m-d H:i:s"));
-	        $path = "data/media/{$md5Type}/{$md5Dir}";
-	        $this->mylibrary->mkdir((FCPATH . $path));
-			$this->db->query("INSERT INTO media SET `id`='1', `allowType`='bmp,jpeg,jpg,png,svg', `sortable`='1', `path`='{$path}', `createTime`=NOW()");
-
 			// for home carousel
 			$md5Type = substr(md5(rand(1, 9999) . date("Y-m-d H:i:s")), 0, 1);
 	        $md5Dir = md5(rand(1, 9999) . date("Y-m-d H:i:s"));
 	        $path = "data/media/{$md5Type}/{$md5Dir}";
 	        $this->mylibrary->mkdir((FCPATH . $path));
 			$this->db->query("INSERT INTO media SET `id`='2', `allowType`='bmp,jpeg,jpg,png,svg', `recommendSize`='w1920xh1080', `sortable`='1', `path`='{$path}', `createTime`=NOW()");
-
-			// for home lookbook
-			$md5Type = substr(md5(rand(1, 9999) . date("Y-m-d H:i:s")), 0, 1);
-	        $md5Dir = md5(rand(1, 9999) . date("Y-m-d H:i:s"));
-	        $path = "data/media/{$md5Type}/{$md5Dir}";
-	        $this->mylibrary->mkdir((FCPATH . $path));
-			$this->db->query("INSERT INTO media SET `id`='3', `allowType`='bmp,jpeg,jpg,png,svg', `recommendSize`='w1052xh1576', `sortable`='1', `path`='{$path}', `createTime`=NOW()");
 
 			// for mind
 			$md5Type = substr(md5(rand(1, 9999) . date("Y-m-d H:i:s")), 0, 1);
@@ -199,95 +176,6 @@ class Mod_patch extends CI_Model {
 		}
 
 
-		$this->db->query("CREATE TABLE IF NOT EXISTS `collection` (
-			`id` int(11) NOT NULL AUTO_INCREMENT,
-			`title` varchar(255) NOT NULL,
-			`subTitle` varchar(255) NOT NULL,
-			`lookbookDescription` text DEFAULT NULL,
-			`imageDescription` text DEFAULT NULL,
-			`lookbookMediaID` int(11) DEFAULT '0',
-			`imageMediaID` int(11) DEFAULT '0',
-			`sn` int(11) DEFAULT '0',
-			`updateTime` datetime DEFAULT NULL,
-			`createTime` datetime NOT NULL,
-			PRIMARY KEY (`id`)
-		) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
-
-
-		$this->db->query("CREATE TABLE IF NOT EXISTS `shop_type` (
-			`id` int(11) NOT NULL AUTO_INCREMENT,
-			`title` varchar(255) NOT NULL,
-			`sn` int(11) DEFAULT '0',
-			`updateTime` datetime DEFAULT NULL,
-			`createTime` datetime NOT NULL,
-			PRIMARY KEY (`id`)
-		) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
-
-
-		$this->db->query("CREATE TABLE IF NOT EXISTS `shop_item` (
-			`id` int(11) NOT NULL AUTO_INCREMENT,
-			`code` varchar(255) NOT NULL,
-			`typeID` int(11) NOT NULL,
-			`title` varchar(255) NOT NULL,
-			`price` int(11) DEFAULT '0',
-			`specialPrice` int(11) DEFAULT '0',
-			`cnt` int(11) DEFAULT '0',
-			`size` varchar(128) DEFAULT NULL,
-			`color` varchar(64) DEFAULT NULL,
-			`path` varchar(255) DEFAULT NULL,
-			`spec` text DEFAULT NULL,
-			`information` text DEFAULT NULL,
-			`composition` text DEFAULT NULL,
-			`customercare` text DEFAULT NULL,
-			`mediaID` int(11) NOT NULL,
-			`major` tinyint(4) DEFAULT '0',
-			`publish` tinyint(4) DEFAULT '0',
-			`updateTime` datetime DEFAULT NULL,
-			`createTime` datetime NOT NULL,
-			PRIMARY KEY (`id`),
-			KEY `code` (`code`),
-			KEY `typeID` (`typeID`),
-			KEY `major` (`major`),
-			KEY `publish` (`publish`)
-		) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
-
-
-		$this->db->query("CREATE TABLE IF NOT EXISTS `discount` (
-			`id` int(11) NOT NULL AUTO_INCREMENT,
-			`title` varchar(255) NOT NULL,
-			`code` varchar(255) DEFAULT NULL,
-			`type` tinyint(4) DEFAULT '0',
-			`value` int(11) DEFAULT '0',
-			`startTime` datetime DEFAULT NULL,
-			`endTime` datetime DEFAULT NULL,
-			`updateTime` datetime DEFAULT NULL,
-			`createTime` datetime NOT NULL,
-			PRIMARY KEY (`id`),
-			UNIQUE KEY `code` (`code`)
-		) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
-
-
-		$this->db->query("CREATE TABLE IF NOT EXISTS `shop_order` (
-			`id` varchar(64) NOT NULL,
-			`firstName` varchar(64) NOT NULL,
-			`lastName` varchar(64) NOT NULL,
-			`email` text NOT NULL,
-			`phone` varchar(32) NOT NULL,
-			`zipCode` int(11) NOT NULL,
-			`city` varchar(64) NOT NULL,
-			`state` varchar(64) NOT NULL,
-			`country` varchar(64) NOT NULL,
-			`address` text NOT NULL,
-			`items` text NOT NULL,
-			`discountCode` varchar(64) NOT NULL,
-			`discountPrice` int(11) NOT NULL,
-			`shipping` int(11) NOT NULL,
-			`total` int(11) NOT NULL,
-			`status` varchar(16) NOT NULL,
-			`updateTime` datetime DEFAULT NULL,
-			`createTime` datetime NOT NULL,
-			PRIMARY KEY (`id`)
-		) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
 	}
 
 	public function create($name) {

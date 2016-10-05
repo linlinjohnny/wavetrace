@@ -58,14 +58,8 @@ class Manage extends CI_Controller {
             'action' => $this->uri->segment(2),
             'carousel' => $this->Mod_home->getCarousel(),
             'editCarouselUrl' => $this->mylibrary->authUrl("{$this->baseUrl}media/edit/2?user={$this->user['account']}"),
-            'carouselMask' => $this->Mod_home->getCarouselMask(),
-            'editMaskUrl' => $this->mylibrary->authUrl("{$this->baseUrl}manage/informationHomeCarouselMask?user={$this->user['account']}"),
             'concept' => $this->Mod_home->getConcept(),
-            'editConceptUrl' => $this->mylibrary->authUrl("{$this->baseUrl}manage/informationHomeConcept?user={$this->user['account']}"),
-            'lookbook' => $this->Mod_home->getLookbook(),
-            'editLookbookUrl' => $this->mylibrary->authUrl("{$this->baseUrl}manage/informationHomeLookbook?user={$this->user['account']}"),
-            'editorial' => $this->Mod_home->getEditorial(),
-            'editEditorialUrl' => $this->mylibrary->authUrl("{$this->baseUrl}manage/informationHomeEditorial?user={$this->user['account']}")
+            'editConceptUrl' => $this->mylibrary->authUrl("{$this->baseUrl}manage/informationHomeConcept?user={$this->user['account']}")
         );
 
 

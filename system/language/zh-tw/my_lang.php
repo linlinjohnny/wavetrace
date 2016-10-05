@@ -376,9 +376,9 @@ $lang['customercare_metaKeywords'] = 'Recluse,privacy policy, returns, payment m
 $lang['customercare_metaDescription'] = 'Recluse support.';
 
 /*** home ***/
-$lang['home_metaTitle'] = 'RECLUSE';
-$lang['home_metaKeywords'] = 'Recluse home,menswear,clothing';
-$lang['home_metaDescription'] = 'Recluse is an independent label which creates strong essence of individuality in clothing. Between east and west, modern and ancient the use of mixing two cultures enhance the detail and construction of the garments.The idea of “Recluse”is to create an aesthetics that for those who seeks for a strong, clear, austere visual style.';
+$lang['home_metaTitle'] = 'wavetrace';
+$lang['home_metaKeywords'] = 'wavetrace home,浪痕,民宿,台東,長濱';
+$lang['home_metaDescription'] = '浪痕 (wavetrace) 是一間在台東縣長濱鄉的休閒民宿，提供一個舒適放慢步調的休息空間。';
 $lang['home_carousel'] = '大圖輪播';
 $lang['home_carouselMask'] = '大圖輪播遮色片';
 $lang['home_concept'] = 'Concept';

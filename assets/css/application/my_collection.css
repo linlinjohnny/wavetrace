@@ -1,0 +1,80 @@
+.collection {
+	margin-top: 70px;
+	margin-bottom: 100px;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.collection .left, .collection .right {
+	text-align: center;	
+}
+
+.collection .description {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.description .title {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 0 18px;
+}
+
+.description .subTitle {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 18px;
+}
+
+.description .lookbook {
+	margin-right: 3px;
+	font-size: 14px;
+    width: 48.5%;
+    height: 28px;
+    color: black;
+    border: 0;
+    background-color: #DCDCDD;
+    padding: 5px 12px;
+}
+
+.description .lookbook:hover {
+	background-color: #B4B5B5;
+}
+
+.description .images {
+	margin-left: 3px;
+	font-size: 14px;
+    width: 48.5%;
+    height: 28px;
+    color: black;
+    border: 1px solid #DCDCDD;
+    background-color: #FEFEFE;
+    padding: 4px 12px;
+}
+
+.description .images:hover {
+	background-color: #F4F4F4;
+}
+
+@media (min-width: 992px) {
+	.collection {
+		margin-bottom: 134px;
+	}
+
+	.description .title {
+		font-size: 18px;
+    	font-weight: bold;
+	}
+
+	.description .subTitle {
+		font-size: 16px;
+    	font-weight: bold;
+	}
+
+	.description .images, 
+	.description .lookbook{
+	    width: calc(25.005% - 65px);
+	}
+}

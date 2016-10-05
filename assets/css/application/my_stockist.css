@@ -1,0 +1,59 @@
+.stockist {
+	margin-top: 70px;
+	margin-bottom: 88px;
+}
+.info {
+	height: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.infoTitle{
+	font-weight: bold;
+	font-size: 12px;
+	color: #B4B5B5;
+}
+.infoContent{
+	height: 20px;
+	margin-bottom: 12px;
+}
+.infoData{
+	font-size: 12px;
+	font-weight: normal;
+}
+.stockistHeader {
+   	background-color: #717071;
+   	color: #fff;
+   	line-height: 34px;
+}
+.stockistTitle {
+	height: 44px;
+	padding-top: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #C9C9CA;
+    line-height: 12px;
+}
+.stockistTitle p, .stockistHeader p, .info>:first-child p, .infoContent>:first-child p{
+	margin: 0 0 0 16px;
+	font-weight: bold;
+}
+.stockistHeader p{
+	font-size: 14px;
+}
+.stockistTitle p{
+	font-size: 12px;
+}
+@media (min-width: 992px) {
+	.stockistTitle p, .stockistHeader p{
+		font-size: 16px;
+	}
+	.stockist{
+		margin-bottom: 122px;
+	}
+	.stockistHeader, .stockistTitle, .infoTitle, .infoData {
+		margin-left: 0;
+    	margin-right: 0;
+	}
+	.infoTitle, .infoData{
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,24 @@
+
+.myMedia {}
+    .myMedia .uploadForm {}
+        .myMedia .uploadForm .btn-file { display:inline-block; margin-bottom:5px; padding:0; }
+        .myMedia .uploadForm .uploading { display:none; }
+            .myMedia .uploading img { width:15px; }
+        .myMedia .uploadForm .submit { display:none; }
+    .myMedia .mediaBox { position:relative; margin-top:25px; }
+        .myMedia .mediaBox .sortHint { display:none; margin-bottom:10px; text-align:center; }
+        .myMedia .mediaBox .saveHint { display:none; position:absolute; top:0; right:20px; font-weight:bold; color:#228b22; }
+        .myMedia .mediaBox ul { margin:0; padding:0; list-style:none; }
+        .myMedia .mediaBox li { margin:10px; display:inline-block; width:30%; }
+            .myMedia .itemBox { position:relative; border:1px solid #ccc; cursor:move; }
+                .myMedia .itemBox .sn { position:absolute; top:4px; left:4px; border-radius:50%; width:24px; height:24px; text-align:center; font-weight:bold; color:#fff; background-color:#333; }
+                .myMedia .itemBox .image { width:100%; height:120px; background-repeat:no-repeat; background-size:100%; background-position:center; }
+                .myMedia .itemBox .delete { position:absolute; top:3px; right:3px; cursor:pointer; }
+                .myMedia .itemBox input { margin:1%; width:98%; }
+                .myMedia .itemBox textarea { margin:1%; width:98%; resize:none; }
+
+
+.mediaContentGrid {}
+    .mediaContentGrid .mcItem { display:inline-block; padding:5px 10px 0 0; width:25%; }
+        .mediaContentGrid .image { width:100%; height:160px; background-repeat:no-repeat; background-size:cover; background-position:center; }
+    .mediaContentGrid .noData { border:1px solid #ccc; padding:25px; text-align:center; }

@@ -1,0 +1,46 @@
+.images {
+	margin-top: 70px;
+	margin-bottom: 134px;
+}
+.title {
+	font-size: 14px;
+	font-weight: bolder;
+    margin-bottom: 22px;
+}
+.description {
+	font-size: 12px;
+	margin-bottom: 22px;
+}
+.grid .item {
+	width: calc(50% - 12px);
+	margin-bottom: 14px;
+}
+
+.grid .item img{
+	width: 100%;
+}
+
+.mfp-content img.mfp-img {
+    padding-top: 0;
+}
+
+.mfp-bg {
+	z-index: 10420;
+}
+
+.mfp-wrap {
+	z-index: 10430;
+}
+
+@media (min-width: 992px) {
+	.title {
+	   font-size: 16px;
+	}
+	.description {
+		font-size: 14px;
+	}
+	.grid .item{
+		width: calc(33% - 10px);
+		margin-bottom: 10px;
+	}
+}

@@ -1,0 +1,5 @@
+Options -Indexes
+
+RewriteEngine on
+    RewriteCond $1 !^(index\.php|favicon\.ico|sitemap\.xml|system|images|assets|data|crontab|css|js)
+    RewriteRule ^(.*)$ index.php?/$1 [L]

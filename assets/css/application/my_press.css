@@ -1,0 +1,50 @@
+.pressWaterfall{
+	margin-top: 70px;
+	margin-bottom: 100px;
+}
+
+.pressWaterfall .grid .item {
+	width: calc(50% - 12px);
+	margin-bottom: 40px;
+	text-decoration: none;
+}
+
+.pressWaterfall .grid .item img{
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.pressWaterfall .grid .item .description{
+	color: black;
+    font-size: 12px;
+    /*處理換行*/
+    white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+}
+
+.mfp-content img.mfp-img {
+    padding-top: 0;
+}
+
+.mfp-bg {
+	z-index: 10420;
+}
+
+.mfp-wrap {
+	z-index: 10430;
+}
+
+@media (min-width: 992px) {
+	.pressWaterfall{
+		margin-bottom: 134px;
+	}
+	.pressWaterfall .grid .item{
+		width: calc(33% - 10px);
+	}
+	.pressWaterfall .grid .item .description{
+	    font-size: 14px;
+	}
+}

@@ -1,0 +1,68 @@
+.mindContent{
+	position: relative;
+    margin-top: 70px;
+    margin-bottom: 80px;
+}
+
+.mindWaterfall{
+	margin-bottom: 100px;
+}
+
+.mindDescription {
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16.66666667%;
+    width: 75%;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.mindDescription .title {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.mindDescription .description {
+	font-size: 14px;
+}
+
+.mindWaterfall .grid .item {
+	width: calc(50% - 12px);
+	margin-bottom: 10px;
+}
+
+.mindWaterfall .grid .item img{
+	width: 100%;
+}
+
+.mfp-content img.mfp-img {
+    padding-top: 0;
+}
+
+.mfp-bg {
+	z-index: 10420;
+}
+
+.mfp-wrap {
+	z-index: 10430;
+}
+
+@media (min-width: 992px) {
+	.mind .mindImg {
+	    padding-right: 0px;
+	}
+	.mindDescription {			
+	    left: 33.33333333%;
+	    width: 33.33333333%;
+	}
+	.mindWaterfall{
+		margin-bottom: 134px;
+	}
+	.mindContent{
+	    margin-top: 70px;
+	    margin-bottom: 156px;
+	}
+	.mindWaterfall .grid .item{
+		width: calc(33% - 10px);
+	}
+}

@@ -1,0 +1,114 @@
+
+body { background-color:#DBDCDC; }
+
+
+.manageDialog {}
+    .manageDialog .modal-content { border-radius:0; }    
+    .manageDialog .modal-header { font-weight:bold; color:#FFF; background-color:#495865; }
+        .manageDialog .modal-header .close { color:#FFF; opacity:1; }
+
+
+.manageHeader { z-index:999; position:fixed; width:100%; height:44px; line-height:44px; background-color:#2B3238; }
+    .manageHeader .topic { float:left; margin-left:20px; font-size:18px; font-weight:bold; color:#FFF; }
+    .manageHeader .info { float:right; color:#FFF; }
+        .manageHeader .account { display:inline-block; margin-right:20px; vertical-align:top; }
+        .manageHeader .logout { display:inline-block; width:150px; vertical-align:top; text-align:center; font-size:14px; color:#FFF; background-color:#829AA8; }
+
+
+.manageFooter { margin:30px 0; text-align:center; font-size:12px; }
+
+
+.manageLogin { position:absolute; top:0; right:0; bottom:0; left:0; margin:auto; width:620px; height:350px; }
+    .manageLogin .loginForm { padding:34px; width:620px; height:306px; background-color:#EEEEEF; }
+        .manageLogin .loginForm .title { text-align:center; font-size:18px; font-weight:bold; }
+        .manageLogin .loginForm .subTitle { margin:10px 0 20px 0; text-align:center; font-size:12px; }
+        .manageLogin .loginForm #myForm { margin:0 auto; padding:16px 20px; border:1px solid #FFF; width:458px; height:118px; font-size:14px; }
+            .manageLogin .loginForm #myForm .submitGroup { margin-top:18px; text-align:center; } 
+                .manageLogin .loginForm #myForm input { border-radius:0; }
+                .manageLogin .loginForm #myForm #form_submit { width:150px; }
+
+
+.manageMenu { z-index:99; position:fixed; padding-top:44px; width:100%; height:154px; background-color:#495865; }
+    .manageMenu .item { position:relative; display:inline-block; width:152px; height:110px; text-align:center; font-size:14px; font-weight:bold; color:#FFF; cursor:pointer; }
+    .manageMenu .item:hover { background-color:#829AA8; }
+        .manageMenu .item img { width:75px; height:75px; }
+    .manageMenu .dropdown-menu { margin:0; border:0; border-radius:0; padding:0; min-width:152px; text-align:center; font-size:12px; background-color:#3E3A39; }
+    .manageMenu .dropdown-menu li { padding:8px; }
+    .manageMenu .dropdown-menu li:hover { background-color:#DCDCDC; }
+    .manageMenu .dropdown-menu li a { color:#FFF; }
+    .manageMenu .dropdown-menu li:hover a { color:#000; background-color:#DCDCDC; font-weight:bold; }
+    .manageMenu .divider { margin:0; padding:0 !important; background-color:#EEEEEF; }
+
+
+.manageBreadcrumb { margin:0 auto 30px auto; padding-top:184px; width:1134px; font-size:18px; font-weight:bold; }
+
+
+.manageContent { margin:0 auto; width:1134px; }
+    .manageContent > .title { padding:11px 34px; font-size:18px; font-weight:bold; color:#FFF; background-color:#495865; }
+    .manageContent > .content { padding:30px 34px 50px 34px; background-color:#FFF; }
+
+
+.manageTable {}
+    .manageTable .contentBox {}
+        .manageTable .unpublish { padding:3px; border-radius:4px; vertical-align:top; text-align:center; font-size:14px; background-color:#ee8323; color:#fff; }
+
+
+.managePress { cursor:pointer; }
+
+
+.manageHome {}
+    .manageHome .title { font-weight:bold; }
+    .manageHome .info {}
+    .manageHome .carousel { margin-bottom:50px; cursor:pointer; }
+    .manageHome .carouselMask { margin-bottom:50px; cursor:pointer; }
+    .manageHome .concept { margin-bottom:50px; cursor:pointer; }
+        .manageHome .concept img { width:400px; height:278px; }
+    .manageHome .lookbook { margin-bottom:50px; cursor:pointer; }
+    .manageHome .editorial { cursor:pointer; }
+        .manageHome .editorial img { width:400px; height:267px; }
+
+
+.editHomeLookbook {}
+    .editHomeLookbook .lookbookMedia { margin-bottom:; }
+
+
+.manageShopType {}
+    .manageShopType .add { margin-bottom:20px; }
+
+.manageCollection {}
+    .manageCollection .add { margin-bottom:20px; }
+
+
+.manageShopItem {}
+    .manageShopItem .contentBox {}
+        .manageShopItem .contentBox .title { font-size:18px; font-weight:bold; }
+        .manageShopItem .contentBox .content {}
+            .manageShopItem .toolBox { margin-bottom:20px; }
+                .manageShopItem .toolBox .btnBox { display:inline-block; vertical-align:top; }
+                    .manageShopItem .toolBox .btnBox a { margin-right:4px; }
+                .manageShopItem .toolBox .perPage { display:inline-block; margin-right:6px; width:auto; }
+                .manageShopItem .toolBox .type { display:inline-block; margin-right:6px; width:auto; }
+                .manageShopItem .toolBox .searchBox { float:right; margin-right:6px; width:200px; }
+                    .manageShopItem .toolBox .search {}
+                .manageShopItem .toolBox .orderBox { float:right; }
+                    .manageShopItem .toolBox .order { display:inline-block; width:auto; }
+            .manageShopItem .major { color:#00F; }
+            .manageShopItem .unpublish { color:#F00; }
+            .manageShopItem .myPager { margin-bottom:10px; }
+
+
+.manageDicount {}
+    .manageDiscount .add { margin-bottom:20px; }
+
+        
+.manageOrderList {}
+    .manageOrderList .toolBox { margin-bottom:5px; text-align:right; }
+        .manageOrderList .toolBox .status { display:inline-block; margin-right:5px; width:auto; }
+        .manageOrderList .toolBox .searchBox { float:right; margin-right:5px; width:250px; }
+        .manageOrderList .toolBox .orderBox { float:right; }
+            .manageOrderList .toolBox .order { display:inline-block; width:auto; }
+    .manageOrderList .myPager { margin-bottom:10px; }
+
+
+.orderDetail { width:600px; font-size:14px; }
+

@@ -1,0 +1,112 @@
+.sysBar { position:absolute; }
+.index {}
+.index .title { font-size:20px; }
+.index .description { font-size:14px; line-height:28px; }
+.index .viewMore { font-size:12px; }
+    .index .homeCarousel .carousel { margin-bottom:190px; }
+        .index .homeCarousel .carousel .rightTool { position:absolute; right:60px; top:50%; height:176px; margin-top:-88px; z-index:999; margin-left:0; left:initial;  }
+            .index .homeCarousel .carousel .rightTool .carousel-indicators{ position:relative; bottom:initial; width:auto; }
+                .index .homeCarousel .carousel .rightTool .carousel-indicators li { display:block; border-radius:0; border:1px solid #898989; background-color:#898989; width:17px; height:4px; }
+                .index .homeCarousel .carousel .rightTool .carousel-indicators li.active { border-color:#FFF; }
+                .index .homeCarousel .carousel .rightTool .carousel-indicators li:not(:last-child) { margin-bottom:30px; }
+            .index .homeCarousel .carousel .rightTool .explore { writing-mode:vertical-rl; margin-top:100px; margin-bottom:18px;  }
+            .index .homeCarousel .carousel .rightTool .decorationLine { height:216px; margin-right:12px; border-right:1px solid; }
+
+    .index .homeCarousel .carousel .mask { display:none; position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(255, 255, 255, 0.7); z-index:99; }
+    .index .homeCarousel .carousel .mask.active { display:block; }
+    .index .homeCarousel .carousel .mask .maskContent { position:absolute; top:50%; width:100%; height:106px; margin-top:-53px;  }
+    .index .homeCarousel .carousel .mask .maskContent .title{ font-size:30px; font-weight:bold; line-height:30px; margin-bottom:20px; }
+    .index .homeCarousel .carousel .mask .maskContent .subtitle{ font-size:12px; line-height:12px; margin-bottom:20px; }
+    .index .homeCarousel .carousel .mask .maskContent a.maskBtn{ display:block; font-size:16px; line-height:30px; width:160px; margin:0 auto; background-color:#FFF; color:#333; text-decoration:none; }
+
+.concept { margin-bottom:102px; }
+    .concept .area { overflow:visible; position:relative; }
+        .concept .area.area1 { z-index:9; opacity:0; }
+        .concept .area.area2 { z-index:999; opacity:0; }
+        .concept .area.area3 { z-index:99; opacity:0; }
+        .concept .area.area0 .content { height:520px; background-color:#F6F6F6; }
+        .concept .area.area1 .content { height:370px; margin-top:-445px; background-color:#DADBDA; }
+        .concept .area.area2 .content { height:340px; margin-top:-385px; margin-left:76px; background-color:rgba(255, 255, 255, 0); }
+            .concept .area.area2 .content .titleBox{ font-weight:bold; font-size:18px; border-bottom:2px solid; padding-bottom:16px; margin-bottom:16px; }
+        .concept .area.area3 .content { width:100%; margin-top:-255px; background-color:#CCC; }
+        .concept .area.area3 .content img{ width:100%; }
+
+.lookbook{ margin-bottom:96px; }
+    .lookbook .lookbookContent .detail { background-color:#888; padding:0; padding-top:60px; padding-bottom:107px; }
+        .lookbook .lookbookContent .area1 { padding:0; margin-bottom:44px; opacity:0; }
+            .lookbook .lookbookContent .area1 .titleBox{ position:relative; width: calc(50% - 60px); height:70px; margin-left: 12.5%; padding:0; padding-bottom:9px; border-bottom:2px solid #FFF; }
+            .lookbook .lookbookContent .area1 .title{ position:absolute; top:0; left:0; }
+            .lookbook .lookbookContent .area1 .subtitle{ position:absolute; bottom:0; left:0; margin-bottom:16px; }
+            .lookbook .lookbookContent .area1 .description{ margin-top:16px; margin-bottom:24px; vertical-align:bottom; padding:0; padding-left:12.5%; padding-right:12.5%; }
+            .lookbook .lookbookContent .area1 .viewMore{ padding:0; margin-left:12.5%; width:25%; border:1px solid #FFF; text-align:center; font-size:14px; line-height:24px; cursor:pointer; }
+            .lookbook .lookbookContent .area1 .viewMore a{ display:block; width:100%; color:#FFF; text-decoration:none; }
+            .lookbook .lookbookContent .area1 .viewMore:hover{ border-color:transparent; }
+            .lookbook .lookbookContent .area1 .viewMore:hover a{ color:#000; }
+        .lookbook .lookbookContent .area2 { width:125%; margin-left:-12.5%; opacity:0; }
+
+        .lookbook .lookbookContent .carouselMulti-control { position:absolute; width:100%; top: calc(50% - 13px); font-size:12px; line-height:26px; left:0; color:#333; text-shadow:initial; }
+
+
+.editorial {}
+    .editorial .editorialContent {}
+    .editorial .area { overflow:visible; position:relative; }
+        .editorial .editorialContent .area1 { opacity:0; z-index:99; }
+            .editorial .editorialContent .area1 .title{ padding-bottom:9px; border-bottom:2px solid; margin-bottom:16px; }
+            .editorial .editorialContent .area1 .description{ width:100%; }
+            .editorial .editorialContent .area1 .viewMore{ margin-top:17px; width:25%; border:1px solid #333; text-align:center; font-size:14px; line-height:24px; cursor:pointer; }
+            .editorial .editorialContent .area1 .viewMore a{ display:block; width:100%; color:#333; text-decoration:none; }
+            .editorial .editorialContent .area1 .viewMore:hover{ background-color:#C8C9CA; border-color:transparent; }
+        .editorial .editorialContent .area2 { opacity:0; z-index:99; }
+        .editorial .editorialContent .area2 .areaContent { margin-top:-416px; }
+        .editorial .editorialContent .area2 img{ width:100%; }
+        .editorial .editorialContent .area3 { z-index:9; }
+        .editorial .editorialContent .area3 .areaContent { background-color:#E0E0DF; height:590px; margin-top:-114px; }
+
+
+
+
+#carouselMulti .carousel-inner>.item { -webkit-transition:.6s ease-in-out left; transition:.6s ease-in-out left; transform:none; }
+#carouselMulti .carousel-inner .active.left  { left: -33.33%; transform:none; }
+#carouselMulti .carousel-inner .active.right { left: 33.33%; transform:none; }
+#carouselMulti .carousel-inner .item.next.left { left: 0; }
+#carouselMulti .carousel-inner .item.prev.right { left: 0; }
+#carouselMulti .carousel-inner .item.next{ left: 33.33%; }
+#carouselMulti .carousel-inner .item.prev{ left: -33.33%; }
+.carousel-inner .item         { background:initial; }
+.carousel-control.left        { width:calc(33.333% - 14px); left:7px; background-color:rgba(255, 255, 255, 0.5); background-image:initial; }
+.carousel-control.right       { width:calc(33.333% - 14px); right:7px; background-color:rgba(255, 255, 255, 0.5); background-image:initial; }
+.carousel-control:hover, .carousel-control:focus { opacity:initial; }
+
+
+
+@media screen and (max-width:991px) {
+    .index .homeCarousel .carousel { margin-bottom:70px; }
+    .index .homeCarousel .carousel .rightTool { right:40px; }
+    .index .homeCarousel .carousel .rightTool .explore { display:none; }
+    .index .homeCarousel .carousel .rightTool .decorationLine { display:none; }
+
+.concept { margin-bottom:70px; }
+        .concept .area.area1 { opacity:1; }
+        .concept .area.area2 { opacity:1; }
+        .concept .area.area3 { opacity:1; }
+        .concept .area.area3 .content { margin-top:initial; }
+        .concept .area.area2 .content { margin-top:initial; margin-left:initial; height:auto; padding:40px 12.5%; background-color:#DADBDA; }
+
+.lookbook{ margin-bottom:70px; }
+    .lookbook .lookbookContent .detail { padding-top:40px; padding-bottom:40px; }
+        .lookbook .lookbookContent .area1 { margin-bottom:30px; opacity:1; }
+            .lookbook .lookbookContent .area1 .titleBox{ width: 75%; margin-left: 12.5%; }
+            .lookbook .lookbookContent .area1 .description{ margin-bottom:30px; }
+            .lookbook .lookbookContent .area1 .viewMore{ margin-left:25%; width:50%; font-size:12px; }
+        .lookbook .lookbookContent .area2 { width:150%; margin-left:-25%; opacity:1; }
+
+            .editorial .editorialContent .area1 .viewMore{ width:66.66%; margin-left:calc(16.66% + 7px); }
+        .editorial .editorialContent .area1 { opacity:1; }
+        .editorial .editorialContent .area2 { opacity:1; }
+        .editorial .editorialContent .area3 .areaContent { background-color:#E0E0DF; height:576px; margin-top:-536px; }
+        .editorial .editorialContent .area2 .areaContent { margin-top:30px; }
+
+.carousel-control.left        { text-align:left; background-color:rgba(255, 255, 255, 0); }
+.carousel-control.right       { text-align:right; background-color:rgba(255, 255, 255, 0); }
+#carouselSingle .carousel-inner .item>div         { padding-left:0; padding-right:0; }
+}

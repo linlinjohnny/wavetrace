@@ -1,0 +1,25 @@
+.customerCareContent{
+	margin-top: 50px;
+} 
+
+@media (min-width: 992px){
+	.customerCareContent{
+		margin-top: 70px;
+	} 
+}
+
+.customerCareContent .description{ margin-bottom: 50px; }
+.customerCareContent .description img { height:auto; max-width:100%; }
+
+.customerCareContent .goTopBox {
+    display: none;
+    margin: 0px auto 50px auto;
+    bottom: 36px;
+    left: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-image: url('../../imgs/back_to_top.svg');
+}
+.customerCareContent .goTopBox:hover { cursor:pointer; background-image:url('../../imgs/back_to_top_after.svg'); }

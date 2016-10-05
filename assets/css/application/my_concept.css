@@ -1,0 +1,16 @@
+.conceptContent{
+	margin-top: 70px;
+} 
+
+.conceptContent .conceptDescription, .conceptContent .conceptImg{ margin-bottom: 70px; }
+
+.conceptContent .conceptDescription img { height:auto; max-width:100%; }
+
+.conceptContent .conceptImg img{height:auto; max-width:100%;}
+
+@media (max-width: 992px){
+	.conceptContent .conceptImg{ margin-bottom: 50px;padding: 0px;}
+    .conceptContent .conceptImg img{ width:100%;}
+}
+
+
